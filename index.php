@@ -49,7 +49,8 @@
           method: 'POST',
           data: data,
           success: function(response) {
-            console.log(response);
+
+            // validating the name
             if (response.name == false) {
               $('#nameError').show();
               $('#nameError').attr('style', 'color: red');
@@ -57,6 +58,8 @@
             } else {
               $('#nameError').attr('style', 'display: none');
             }
+
+            // validating the number
             if (response.number == false) {
               $('#numberError').show();
               $('#numberError').attr('style', 'color: red');
@@ -64,6 +67,8 @@
             } else {
               $('#numberError').attr('style', 'display : none');
             }
+
+            // validating the email
             if (response.email == false) {
               $('#emailError').show();
               $('#emailError').attr('style', 'color: red');
@@ -71,6 +76,8 @@
             } else {
               $('#emailError').attr('style', 'display : none');
             }
+
+            // validating the subject
             if (response.subject == false) {
               $('#subjectError').show();
               $('#subjectError').attr('style', 'color: red');
@@ -78,6 +85,8 @@
             } else {
               $('#subjectError').attr('style', 'display : none');
             }
+
+            // validating the message
             if (response.msg == false) {
               $('#messageError').show();
               $('#messageError').attr('style', 'color: red');
@@ -85,6 +94,8 @@
             } else {
               $('#messageError').attr('style', 'display : none');
             }
+
+            // request validation
             if (response.success == true) {
               alert('From Submitted Successfully !');
               window.location.reload();

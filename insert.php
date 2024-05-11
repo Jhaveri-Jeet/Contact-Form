@@ -15,24 +15,31 @@ $validateSubject = validateSubject($subject);
 $msg = $_POST['msg'];
 $validateMessage = validateMessage($msg);
 
+// validating the name
 if (!$validateName) {
     echo json_encode(['name' => false]);
     return;
 }
 
+// validating the number
 if (!$validateNumber) {
     echo json_encode(['number' => false]);
     return;
 }
 
+// validating the email
 if (!$validateEmail) {
     echo json_encode(['email' => false]);
     return;
 }
+
+// validating the subject
 if (!$validateSubject) {
     echo json_encode(['subject' => false]);
     return;
 }
+
+// validating the message
 if (!$validateMessage) {
     echo json_encode(['msg' => false]);
     return;

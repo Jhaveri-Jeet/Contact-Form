@@ -1,6 +1,5 @@
 <?php
 
-
 function validateName($name)
 {
     if ($name === '')
